@@ -10,7 +10,6 @@ context "Remote metrics" do
           sandbox: http://api.vanitydash.com/metrics/sandbox
       RUBY
     end
-    ::Rails.stubs(:root).returns(Pathname.new(File.expand_path("tmp")))
     Dir.chdir "tmp" do
       Vanity.playground.load!
     end
